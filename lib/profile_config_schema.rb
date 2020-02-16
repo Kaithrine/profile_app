@@ -3,7 +3,7 @@
 require 'json-schema'
 require 'uri'
 
-PHONE_NUMBER_REGEX = '^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'
+PHONE_NUMBER_REGEX = '^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'.freeze
 
 # ProfileConfigSchema module is used to validate json file for user profile
 module ProfileConfigSchema
@@ -26,7 +26,7 @@ module ProfileConfigSchema
         education: { type: 'string', minLength: 30 },
         past_job_experience: { type: 'string', minLength: 5 },
         location: { type: 'string' },
-        url_to_repo: {type: 'string', pattern: URI.regexp }
+        url_to_repo: { type: 'string', pattern: URI.regexp(['https']) }
       ).freeze
     end
   end

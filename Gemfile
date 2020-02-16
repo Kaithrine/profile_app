@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'json'
 gem 'json-schema', '~> 2.8'
@@ -12,5 +12,6 @@ group :development do
 end
 
 group :test do
+  gem 'rack-test'
   gem 'rspec'
 end

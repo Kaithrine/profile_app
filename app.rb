@@ -5,9 +5,9 @@ require_relative 'lib/profile_config_schema.rb'
 
 set :show_exceptions, false
 
-PROFILE_PATH = 'config/profile.json'
+PROFILE_PATH = 'config/profile.json'.freeze
 
-class InvalidProfileError< StandardError; end
+class InvalidProfileError < StandardError; end
 
 before do
   content_type :json
@@ -25,9 +25,9 @@ get '/' do
 end
 
 error InvalidProfileError do
-  { status: 'invalid profile'}.to_json
+  { status: 'invalid profile' }.to_json
 end
 
 not_found do
-  {status: 'invalid path' }.to_json
+  { status: 'invalid path' }.to_json
 end
