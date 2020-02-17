@@ -20,4 +20,5 @@ deploy:
   - gem install json-schema
   - gem install dpl
   - bundle install
+  - git add .
   - dpl --provider=heroku --app=zadeploy --api-key='82c1a418-84b0-41f0-8f13-f109be897745'
