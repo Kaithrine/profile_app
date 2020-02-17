@@ -1,5 +1,5 @@
 default:
-  image: ruby:2.5
+  image: ruby:2.7
   environment: zadeploy
 
 rspec:
