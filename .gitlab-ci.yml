@@ -14,10 +14,9 @@ rubocop:
   - rubocop
 
 deploy:
+  variables:
+    - $HEROKU_API_KEY == "82c1a418-84b0-41f0-8f13-f109be897745"
+    - $HEROKU_APP_NAME == "zadeploy"
   script:
-  - gem install sinatra
-  - gem install json-schema
-  - gem install dpl
-  - git add .
-  - git push https://heroku:'82c1a418-84b0-41f0-8f13-f109be897745'@https://git.heroku.com/zadeploy.git master
-  - dpl --provider=heroku git --app=zadeploy --api-key='82c1a418-84b0-41f0-8f13-f109be897745'
+  - git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+  
