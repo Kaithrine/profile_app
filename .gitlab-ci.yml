@@ -3,11 +3,9 @@ default:
 
 rspec:
   script:
-  - gem install bundler
   - gem install sinatra
   - gem install json-schema
   - gem install rspec
-  - bundle install
   - rspec
 
 rubocop:
@@ -17,7 +15,9 @@ rubocop:
 
 deploy:
   script:
+  - gem install bundler
   - gem install sinatra
   - gem install json-schema
   - gem install dpl
+  - bundle install
   - dpl --provider=heroku --app=zadeploy --api-key='82c1a418-84b0-41f0-8f13-f109be897745'
