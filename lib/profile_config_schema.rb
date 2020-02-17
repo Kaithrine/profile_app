@@ -3,7 +3,7 @@
 require 'json-schema'
 require 'uri'
 
-PHONE_NUMBER_REGEX = '^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'.freeze
+PHONE_NUMBER_REGEX = '^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'
 
 # ProfileConfigSchema module is used to validate json file for user profile
 module ProfileConfigSchema
