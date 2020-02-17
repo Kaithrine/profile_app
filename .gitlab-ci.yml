@@ -4,12 +4,12 @@ default:
 rspec:
   script:
   - gem install rspec
-  - bundle exec rspec
+  - rspec
 
 rubocop:
   script:
   - gem install rubocop
-  - bundle exec rubocop
+  - rubocop
 
 deploy:
   script:
