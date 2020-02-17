@@ -2,11 +2,13 @@ default:
   image: ruby:2.5
 
 rspec:
-  script: 
+  script:
+  - gem install rspec
   - bundle exec rspec
 
 rubocop:
-  script: 
+  script:
+  - gem install rubocop
   - bundle exec rubocop
 
 deploy:
