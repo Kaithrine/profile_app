@@ -1,15 +1,15 @@
 default:
   image: ruby:2.5
 
-stage: rspec
+rspec:
   script: 
   - bundle exec rspec
 
-stage: rubocop
+rubocop:
   script: 
   - bundle exec rubocop
 
-stage: deploy
+deploy:
   script:
   - gem install dpl
   - dpl --provider=heroku --app=gitlab-ci-ruby-test-staging --api-key=$HEROKU_STAGING_API_KEY
