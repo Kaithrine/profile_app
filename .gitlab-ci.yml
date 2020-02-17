@@ -14,9 +14,6 @@ rubocop:
   - rubocop
 
 deploy:
-  variables:
-     HEROKU_API_KEY: "82c1a418-84b0-41f0-8f13-f109be897745"
-     HEROKU_APP_NAME: "zadeploy"
   script:
   - git config --global user.email "itnewstudent@gmail.com"
   - git config --global user.name "Catherine"
