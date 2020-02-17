@@ -15,6 +15,7 @@ rubocop:
 
 deploy:
   script:
+  - git add .
   - git config --global user.email "itnewstudent@gmail.com"
   - git config --global user.name "Catherine"
   - git commit -m "initial commit"
