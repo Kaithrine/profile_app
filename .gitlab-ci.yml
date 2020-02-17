@@ -18,5 +18,6 @@ deploy:
   - gem install sinatra
   - gem install json-schema
   - gem install dpl
-  - heroku config:add \ HEROKU_OAUTH_ID=7d03ad2d-a30a-47b8-a0d5-9d4178c407a1 \ HEROKU_OAUTH_SECRET=c56e49e5-ac2e-4467-a7d6-fef305e50d84
+  - gem install bundler
+  - bundle exec heroku config:add \ HEROKU_OAUTH_ID=7d03ad2d-a30a-47b8-a0d5-9d4178c407a1 \ HEROKU_OAUTH_SECRET=c56e49e5-ac2e-4467-a7d6-fef305e50d84
   - dpl --provider=heroku --app=gitlab-ci-ruby-test-staging --api-key=$HEROKU_STAGING_API_KEY
