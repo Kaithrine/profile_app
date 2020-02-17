@@ -5,7 +5,7 @@ require_relative 'lib/profile_config_schema.rb'
 
 set :show_exceptions, false
 
-PROFILE_PATH = 'config/profile.json'.freeze
+PROFILE_PATH = 'config/profile.json'
 
 class InvalidProfileError < StandardError; end
 
