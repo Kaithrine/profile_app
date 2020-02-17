@@ -3,6 +3,8 @@ default:
 
 rspec:
   script:
+  - gem install sinatra
+  - gem install json-schema
   - gem install rspec
   - rspec
 
@@ -13,5 +15,7 @@ rubocop:
 
 deploy:
   script:
+  - gem install sinatra
+  - gem install json-schema
   - gem install dpl
   - dpl --provider=heroku --app=gitlab-ci-ruby-test-staging --api-key=$HEROKU_STAGING_API_KEY
