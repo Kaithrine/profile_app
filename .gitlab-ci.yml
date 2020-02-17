@@ -18,4 +18,4 @@ deploy:
   - gem install sinatra
   - gem install json-schema
   - gem install dpl
-  - dpl --provider=heroku --app=zadeploy --api-key='933c8ec4-87c1-42ce-9391-983821811655'
+  - dpl --provider=heroku --app=zadeploy --api-key='82c1a418-84b0-41f0-8f13-f109be897745'
